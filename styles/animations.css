@@ -1,0 +1,150 @@
+/* ------------------------------ */
+/* ----------- Header ----------- */
+/* ------------------------------ */
+
+h1 p:nth-child(1),
+h1 p:nth-child(2),
+.about-me-info,
+.skills div div{
+    animation-delay: 1s;
+    animation-duration: 1.4s;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+}
+
+h1 p:nth-child(1){
+    animation-name: moveInLeft;
+
+}
+h1 p:nth-child(2){
+    animation-name: moveInRight;
+}
+
+.view-work div{
+    animation-name: moveDown;
+    animation-delay: 2s;
+    animation-duration: 0.7s;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+}
+
+.view-work:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: #ff4d5a;
+    transform: scale(1.1);
+
+}
+.view-work:hover div{
+    transform: translateY(-1px);
+}
+
+.view-work div::before,
+.view-work div::after{
+    border: 1px solid #ff4d5a;
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 210px;
+    height: 2.5rem;
+}
+
+.view-work div:hover::before,
+.view-work div:hover::after{
+    border-color: transparent;
+    border-radius: 3px;
+    filter: blur(2px);
+    transform: scaleX(1.4) scaleY(2.3);
+    transition: 800ms transform ease, 1900ms blur ease, 700ms border-color ease;
+    pointer-events: none;
+}
+.view-work div:hover::after{
+    transition-delay: 0.150s;
+}
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(4em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ------------------------------ */
+/* ------------ About ----------- */
+/* ------------------------------ */
+.about-me-info{
+    animation-name: moveInLeft;
+}
+
+.skills div div{
+    animation-duration: 3s;
+    animation-name: skills;
+}
+.skills-row:nth-child(1) .skills-item:nth-child(1){
+    animation-delay: 2.2s;
+}
+.skills-row:nth-child(1) .skills-item:nth-child(2){
+    animation-delay: 2.6s;
+}
+.skills-row:nth-child(1) .skills-item:nth-child(3){
+    animation-delay: 3.0s;
+}
+.skills-row:nth-child(2) .skills-item:nth-child(1){
+    animation-delay: 2.3s;
+}
+.skills-row:nth-child(2) .skills-item:nth-child(2){
+    animation-delay: 2.7s;
+}
+.skills-row:nth-child(2) .skills-item:nth-child(3){
+    animation-delay: 3.1s;
+}
+.skills-row:nth-child(2) .skills-item:nth-child(4){
+    animation-delay: 2.5s;
+}
+.skills-row:nth-child(3) .skills-item:nth-child(1){
+    animation-delay: 2.8s;
+}
+.skills-row:nth-child(3) .skills-item:nth-child(2){
+    animation-delay: 2.4s;
+}
+.skills-row:nth-child(3) .skills-item:nth-child(3){
+    animation-delay: 2.9s;
+}
+
+@keyframes skills {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

@@ -3,37 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-------------------- Heading and Canvas -------------------->
+
     <section id="header-section" class="flex">
+<!--        <div id="particles-js"></div>-->
+
         <header>
-            <h1>Hi I'm Leo</h1>
+            <h1>
+                <p>Hello, I'm <span class="name">Elliott</span>.</p>
+                <p>I'm a full stack web developer.</p>
+            </h1>
+            <a href="#about-me" class="view-work">
+                <div>View my work</div>
+            </a>
+
         </header>
     </section>
     <nav id="nav-bar">
         <ul class="flex navmenu" >
             <li><a href="#header-section">Home</a></li>
-            <li><a href="#nav-bar">About</a></li>
+            <li><a href="#about-me">About</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <section id="about-me" >
-        <div id="about-me-cont" class="container flex column">
-            <h2>About Me</h2>
+
+<!-------------------- About Me  -------------------->
+    <section id="about-me" class="about-me" >
+
+        <div class="about-me-cont flex column container" id="tes">
+            <h2>About</h2>
             <article class="flex about-content">
-                <span>Info about me Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque delectus dicta facilis in iste laboriosam minus, nesciunt nulla placeat quae qui quis rem suscipit veniam? Architecto consectetur consequatur hic maiores placeat repellendus repudiandae, voluptas! Aut, consectetur culpa doloribus natus nisi quis quisquam ullam voluptates. Assumenda blanditiis labore quam quod.</span>
-                <div>content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet animi asperiores consequatur, doloribus, enim explicabo hic illo impedit in ipsam laboriosam magnam molestiae mollitia natus nemo perferendis quae rem sed similique sit suscipit veniam voluptatibus? Autem deserunt dignissimos dolores enim illum iste, laudantium magni, maxime, modi nostrum quam voluptatum.</div>
+                <div class="about-me-info">Info about me Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusamus cumque delectus dicta facilis in iste laboriosam minus,
+                    nesciunt nulla placeat quae qui quis rem suscipit veniam? Architecto
+                    consectetur consequatur hic maiores placeat repellendus repudiandae,
+                    voluptas! Aut, consectetur culpa doloribus natus nisi quis quisquam ullam
+                    voluptates. Assumenda blanditiis labore quam quod.
+                </div>
+                <div class="skills flex">
+<!--                    First Row-->
+                    <div class="skills-row">
+                        <div class="skills-item">
+                            <img src="images/html.png" alt="html logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                HTML
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/react.png" alt="react logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                REACT
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/expressjs.png" alt="express.js logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                EXPRESS.JS
+                            </div>
+                        </div>
+                    </div>
+
+<!--                    Middle Row-->
+                    <div class="skills-row">
+                        <div class="skills-item">
+                            <img src="images/JS.png" alt="javascript logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                JAVASCRIPT
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/css.png" alt="css logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                CSS
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/mongo.png" alt="mongoDB logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                MONGODB
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/git.png" alt="git logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                GIT
+                            </div>
+                        </div>
+                    </div>
+
+<!--                    Last Row-->
+                    <div class="skills-row">
+                        <div class="skills-item">
+                            <img src="images/sass.png" alt="sass logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                SASS
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/nextjs.png" alt="nextJS logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                NEXT.JS
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="images/nodejs.png" alt="nodeJS logo" class="skills-logo">
+                            <div class="skills-item-name">
+                                NODE.JS
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </article>
         </div>
     </section>
+
+<!-------------------- Projects  -------------------->
     <section>
 
     </section>
+
+<!-------------------- Contact Section -------------------->
+
+<script src="node_modules/particles.js/particles.js"></script>
+<script src="scripts/main.js"></script>
 
 </body>
 </html>
