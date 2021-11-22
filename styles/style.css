@@ -14,6 +14,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 html,
 body {
     padding: 0;
@@ -198,6 +199,10 @@ a, a:focus, a:active {
 }
 
 
+/* ------------------------------ */
+/* ---------- Projects ---------- */
+/* ------------------------------ */
+
 
 
 
@@ -273,3 +278,4 @@ a, a:focus, a:active {
         flex-direction: column;
     }
 }
+
