@@ -163,6 +163,7 @@ a, a:focus, a:active {
 .about-me-cont h2 {
     font-size: 4rem;
     text-align: center;
+    padding-top: 50px;
 }
 .about-content {
     width: 95%;
@@ -200,6 +201,71 @@ a, a:focus, a:active {
 
 
 
+
+/* ------------------------------ */
+/* ----------- Footer ----------- */
+/* ------------------------------ */
+
+.footer{
+    height: 100px;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footerCont{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerButtons{
+    height: 100px;
+}
+.card{
+    display: inline-block;
+    width: 100px;
+}
+
+.card a{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    background: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(.6, 0 , .7, 1);
+    line-height: 60px;
+    padding: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.card a:hover{
+    color: #262626;
+}
+.card a:hover:before{
+    left:0;
+    right: auto;
+    width: 100%;
+}
+.card a:before{
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: white;
+    transition: all 0.5s cubic-bezier(.6, 0 , .7, 1);
+    border-radius: 8px;
+}
 
 
 @media (max-width: 1200px) {
