@@ -101,13 +101,18 @@ h1 p:nth-child(2){
 /* ------------ About ----------- */
 /* ------------------------------ */
 
-.about-me-info{
+.about-me-info-ani{
     animation-name: moveInLeft;
 }
 
-.skills div div{
+.skills-item{
+    opacity: 0;
+}
+.skills-item-ani{
+    opacity: 1;
     animation-duration: 3s;
     animation-name: skills;
+    animation-fill-mode: forwards;
 }
 .skills-row:nth-child(1) .skills-item:nth-child(1){
     animation-delay: 2.2s;
@@ -169,7 +174,7 @@ body::-webkit-scrollbar{
     top: 0;
     right: 0;
     width: 10px;
-    z-index: 2;
+    z-index: 4;
 }
 #scrollPath{
     height: 100%;

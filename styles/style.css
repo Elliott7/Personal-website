@@ -55,11 +55,6 @@ header{
     text-align: center;
 }
 
-/*#header-section {*/
-/*    min-height: 400px;*/
-/*    height: 100vh;*/
-/*}*/
-
 h1 p {
     font-size: 4rem;
     margin: 50px;
@@ -108,6 +103,7 @@ li, li a{
     background-color: lightgray;
     position: sticky;
     top:0;
+    z-index: 3;
 }
 
 a, a:focus, a:active {
@@ -148,8 +144,6 @@ a, a:focus, a:active {
 /* ---------- About Me ---------- */
 /* ------------------------------ */
 
-.about-me {
-}
 .about-me-cont {
     min-height: 100vh;
 }
@@ -157,26 +151,30 @@ a, a:focus, a:active {
     flex-flow: column;
 }
 .container{
-    border: 5px solid green;
     justify-content: space-around;
 }
 
-.about-me-cont h2 {
+.heading {
     font-size: 4rem;
     text-align: center;
-    padding-top: 50px;
+    margin: 0;
+    padding-top: 100px;
 }
 .about-content {
     width: 95%;
     min-height: 600px;
     justify-content: space-evenly;
 }
-.about-content > div{
+.about-me-info,
+.skills{
     margin: 40px;
     max-width: 500px;
     font-size: 1.2em;
 }
-
+.test{
+    background-color: orange;
+    color: orange;
+}
 .skills{
     text-align: center;
     gap:50px;
@@ -202,10 +200,76 @@ a, a:focus, a:active {
 /* ------------------------------ */
 /* ---------- Projects ---------- */
 /* ------------------------------ */
+.heading {
+}
+h2:before{
+    content: '';
+    border-bottom: 20px solid #ff4d5a;
+    display: block;
+    position: relative;
+    left: 25px;
+    top: 75px;
+    z-index: -1;
+}
+.project-cont {
+    min-height: 100vh;
+    justify-content: center;
+}
+.project-inner-cont{
+    height: 800px;
+    padding: 0 20px;
+}
+.imageContainer{
+    background-color: #3216bb;
+    box-shadow: 50px 0 #3216bb;
+    padding: 50px 50px 50px 0;
+    max-height: 1000px;
+    max-width: 1000px;
+    transition: 0.5s;
+}
+.project-pic{
+    transition: 0.5s;
+}
+
+.imageContainer:hover .project-pic{
+    transform: scale(0.9);
+}
+.project-info{
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+}
+.project-info p:nth-child(1){
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
 
 
+}
+.project-info p:nth-child(2){
+    font-size: 1rem;
+    padding: 20px;
+}
+.project-links{
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: underline #ff4d5a;
+    text-transform: uppercase;
+    line-height: 50px;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+}
 
-
+.dir-reversed{
+    flex-direction: row-reverse;
+}
+.bg-reversed{
+    box-shadow: -50px 0 #3216bb;
+    padding: 50px 0 50px 50px;
+}
+.info-reversed{
+    text-align: right;
+}
 
 /* ------------------------------ */
 /* ----------- Footer ----------- */
@@ -273,9 +337,120 @@ a, a:focus, a:active {
 }
 
 
-@media (max-width: 1200px) {
+
+@media  (max-width: 1200px) {
     .about-content{
         flex-direction: column;
     }
+    .project-cont{
+        margin-bottom: 150px;
+    }
+    .project-inner-cont{
+        flex-direction: column-reverse;
+    }
+    .imageContainer {
+        box-shadow: 50px 0 #3216bb;
+        padding: 10px 10px 10px 0;
+    }
+    .bg-reversed{
+        box-shadow: -50px 0 #3216bb;
+    }
+    .project-info, .info-reversed{
+        text-align: center;
+    }
+
+    .project-info p:nth-child(1){
+        font-size: 2rem;
+    }
+    .project-info p:nth-child(2){
+        font-size: 1rem;
+    }
+    .project-links{
+        font-size: 1.25rem;
+        line-height: 30px;
+    }
+    .heading{
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 992px){
+    h1 p{
+        font-size: 3rem;
+    }
+    li, li a{
+        font-size: 1.25rem;
+        padding: 15px 5px;
+    }
+    .project-cont{
+        margin-bottom: 100px;
+    }
 }
 
+@media (max-width: 768px){
+    .navmenu{
+        padding: 0;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    li a{
+        margin: 0;
+        width: 80px;
+        text-align: center;
+    }
+    .name-ani{
+        width: 120px;
+    }
+    .project-cont{
+        margin-bottom: 50px;
+    }
+    .footerButtons{
+        width: 500px;
+        min-width: 350px;
+    }
+}
+
+
+@media (max-width: 576px){
+    h1 p{
+        font-size: 2.5rem;
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+    .navmenu{
+        justify-content: center;
+    }
+    li a{
+        width: 60px;
+        font-size: 1rem;
+    }
+    .my-name{
+        display: none;
+    }
+    .nav-buttons{
+        min-width: 250px;
+    }
+    .project-info{
+        width: 300px;
+    }
+    .footerButtons{
+        height: 80px;
+        min-width: 250px;
+    }
+    .card a{
+        width: 50px;
+        height: 50px;
+    }
+    .about-me-info{
+        font-size: 1rem;
+    }
+    .skills{
+        gap: 10px;
+        font-size: 1rem;
+    }
+    .skills-item{
+        width: 80px;
+    }
+
+}

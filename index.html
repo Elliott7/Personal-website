@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/animations.css">
@@ -20,7 +21,7 @@
         <header>
             <h1>
                 <p>Hello, I'm <span class="name">Elliott</span>.</p>
-                <p>I'm a full stack web developer.</p>
+                <p>I'm a front end web developer.</p>
             </h1>
             <a href="#about-me" class="view-work">
                 <div>View my work</div>
@@ -31,31 +32,30 @@
 <!------------------------ Navbar --------------------------->
     <nav id="nav-bar">
         <ul class="flex navmenu" >
-            <li class="nav-ani">
+            <li class="nav-ani my-name">
                 <a class="name-ani" href="#header-section">Elliott Breadmore</a>
             </li>
-            <li  class="nav-ani">
+            <li class="nav-ani nav-buttons">
                 <a href="#header-section">Home</a>
                 <a href="#about-me">About</a>
-                <a href="#">Projects</a>
+                <a href="#projects">Projects</a>
                 <a href="#">Contact</a>
             </li>
-
         </ul>
     </nav>
 <!----------------------- About Me  ------------------------>
     <section id="about-me" class="about-me" >
 
-        <div class="about-me-cont flex column container" id="tes">
-            <h2>About</h2>
+        <div class="about-me-cont flex column container">
+            <h2 class="heading">About</h2>
             <article class="flex about-content">
-                <div class="about-me-info">Info about me Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <span class="about-me-info" id="my-description">Info about me Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Accusamus cumque delectus dicta facilis in iste laboriosam minus,
                     nesciunt nulla placeat quae qui quis rem suscipit veniam? Architecto
                     consectetur consequatur hic maiores placeat repellendus repudiandae,
                     voluptas! Aut, consectetur culpa doloribus natus nisi quis quisquam ullam
                     voluptates. Assumenda blanditiis labore quam quod.
-                </div>
+                </span>
                 <div class="skills flex">
 <!--                    First Row-->
                     <div class="skills-row">
@@ -136,20 +136,91 @@
     </section>
 
 <!-------------------- Projects  -------------------------->
+<!-------------------- Project One  ----------------------->
+    <section  id="projects">
+        <div class="flex">
+            <h2 class="heading project">Projects</h2>
+        </div>
+        <div class="flex container project-cont">
+            <div class="flex project-inner-cont">
+                <div class="imageContainer">
+                    <img class="project-pic" src="images/weatherApp2.png" alt="">
+                </div>
+                <div class="project-info">
+                    <p>Weather App</p>
+                    <p>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis. <br>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis.<br>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis.
+                    </p>
+                    <a class="project-links" href="#">LIVE APP</a>
+                    <br>
+                    <a class="project-links" href="#">Source Code</a>
 
-    <section>
-    
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
+<!-------------------- Project Two  ----------------------->
+    <section>
+        <div class="flex container project-cont">
+            <div class="flex project-inner-cont dir-reversed">
+                <div class="imageContainer bg-reversed">
+                    <img class="project-pic" src="images/weatherApp2.png" alt="">
+                </div>
+                <div class="project-info ">
+                    <p>Weather App</p>
+                    <p>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis. <br>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis.<br>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis.
+                    </p>
+                    <a class="project-links info-reversed" href="#">LIVE APP</a>
+                    <br>
+                    <a class="project-links info-reversed" href="#">Source Code</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+<!-------------------- Project Three  ----------------------->
+    <section>
+        <div class="flex container project-cont">
+            <div class="flex project-inner-cont">
+                <div class="imageContainer">
+                    <img class="project-pic" src="images/weatherApp2.png" alt="">
+                </div>
+                <div class="project-info">
+                    <p>Weather App</p>
+                    <p>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis. <br>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis.<br>
+                        Words Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officiis.
+                    </p>
+                    <a class="project-links" href="#">LIVE APP</a>
+                    <br>
+                    <a class="project-links" href="#">Source Code</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 <!-------------------- Contact Section -------------------->
 
 
 <!-------------------- Footer Section --------------------->
 
 
-<footer class="footer">
+<footer class="footer" id="foot">
     <div class="footerCont">
-        <div>
+        <div class="my-name">
             Elliott Breadmore
         </div>
         <div class="footerButtons">
@@ -163,7 +234,7 @@
                 <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-        <div>
+        <div class="my-name">
             Elliott Breadmore
         </div>
 
@@ -172,7 +243,8 @@
 </footer>
 
 
-<script src="node_modules/particles.js/particles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<!--<script src="node_modules/particles.js/particles.js"></script>-->
 <script src="scripts/main.js"></script>
 
 </body>
