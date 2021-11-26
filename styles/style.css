@@ -271,6 +271,45 @@ h2:before{
     text-align: right;
 }
 
+.carousel-cont{
+    position: relative;
+    max-height: 650px;
+    max-width: 1000px;
+}
+.carousel-cont .project-pic{
+    position: absolute;
+}
+.op0{
+    opacity: 0;
+}
+.top, .mid{
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+.mid{
+    animation-delay: 6s;
+}
+/*@keyframes fade {*/
+/*    0%, 25%{*/
+/*        opacity: 1;*/
+/*    }*/
+/*    75%, 100%{*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
+@keyframes fade {
+    0%, 33%{
+        opacity: 1;
+    }
+    40%, 75%, 100%{
+        opacity: 0;
+    }
+}
+
 /* ------------------------------ */
 /* ----------- Footer ----------- */
 /* ------------------------------ */
@@ -409,6 +448,7 @@ h2:before{
         min-width: 350px;
     }
 }
+
 
 
 @media (max-width: 576px){

@@ -101,12 +101,14 @@ h1 p:nth-child(2){
 /* ------------ About ----------- */
 /* ------------------------------ */
 
-.about-me-info-ani{
-    animation-name: moveInLeft;
-}
 
-.skills-item{
+
+.skills-item, .about-me-info{
     opacity: 0;
+}
+.about-me-info-ani{
+    opacity: 1;
+    animation-name: moveInLeft;
 }
 .skills-item-ani{
     opacity: 1;

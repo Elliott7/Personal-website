@@ -31,8 +31,6 @@ function callbackFunc(entries){
             }
             text.classList.add('about-me-info-ani')
         }
-        let txt = `${entry.target.id} visibility ${entry.isIntersecting}`
-        console.log(txt)
     })
 }
 
