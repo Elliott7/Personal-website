@@ -1,25 +1,26 @@
 /* ------------------------------ */
 /* ----------- Header ----------- */
 /* ------------------------------ */
+
 h1 p:nth-child(1),
 h1 p:nth-child(2),
 .about-me-info,
-.skills div div {
+.skills div div{
   animation-delay: 1s;
   animation-duration: 1.4s;
   animation-fill-mode: backwards;
   animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
 }
 
-h1 p:nth-child(1) {
+h1 p:nth-child(1){
   animation-name: moveInLeft;
-}
 
-h1 p:nth-child(2) {
+}
+h1 p:nth-child(2){
   animation-name: moveInRight;
 }
 
-.view-work div {
+.view-work div{
   animation-name: moveDown;
   animation-delay: 2s;
   animation-duration: 0.7s;
@@ -27,21 +28,21 @@ h1 p:nth-child(2) {
   animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
 }
 
-.view-work:hover {
+.view-work:hover{
   cursor: pointer;
   text-decoration: none;
   color: #ff4d5a;
   transform: scale(1.1);
-}
 
-.view-work:hover div {
+}
+.view-work:hover div{
   transform: translateY(-1px);
 }
 
 .view-work div::before,
-.view-work div::after {
+.view-work div::after{
   border: 1px solid #ff4d5a;
-  content: "";
+  content: '';
   position: absolute;
   top: -2px;
   left: -2px;
@@ -50,7 +51,7 @@ h1 p:nth-child(2) {
 }
 
 .view-work div:hover::before,
-.view-work div:hover::after {
+.view-work div:hover::after{
   border-color: transparent;
   border-radius: 3px;
   filter: blur(2px);
@@ -58,21 +59,21 @@ h1 p:nth-child(2) {
   transition: 800ms transform ease, 1900ms blur ease, 700ms border-color ease;
   pointer-events: none;
 }
-
-.view-work div:hover::after {
-  transition-delay: 0.15s;
+.view-work div:hover::after{
+  transition-delay: 0.150s;
 }
 
 @keyframes moveInLeft {
-  0% {
+  0%{
     opacity: 0;
     transform: translateX(-10rem);
   }
-  100% {
+  100%{
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -83,6 +84,7 @@ h1 p:nth-child(2) {
     transform: translateX(0);
   }
 }
+
 @keyframes moveDown {
   0% {
     opacity: 0;
@@ -93,62 +95,55 @@ h1 p:nth-child(2) {
     transform: translateY(0);
   }
 }
+
+
 /* ------------------------------ */
 /* ------------ About ----------- */
 /* ------------------------------ */
-.skills-item, .about-me-info {
+
+
+
+.skills-item, .about-me-info{
   opacity: 0;
 }
-
-.about-me-info-ani {
+.about-me-info-ani{
   opacity: 1;
   animation-name: moveInLeft;
 }
-
-.skills-item-ani {
+.skills-item-ani{
   opacity: 1;
   animation-duration: 3s;
   animation-name: skills;
   animation-fill-mode: forwards;
 }
-
-.skills-row:nth-child(1) .skills-item:nth-child(1) {
+.skills-row:nth-child(1) .skills-item:nth-child(1){
   animation-delay: 2.2s;
 }
-
-.skills-row:nth-child(1) .skills-item:nth-child(2) {
+.skills-row:nth-child(1) .skills-item:nth-child(2){
   animation-delay: 2.6s;
 }
-
-.skills-row:nth-child(1) .skills-item:nth-child(3) {
-  animation-delay: 3s;
+.skills-row:nth-child(1) .skills-item:nth-child(3){
+  animation-delay: 3.0s;
 }
-
-.skills-row:nth-child(2) .skills-item:nth-child(1) {
+.skills-row:nth-child(2) .skills-item:nth-child(1){
   animation-delay: 2.3s;
 }
-
-.skills-row:nth-child(2) .skills-item:nth-child(2) {
+.skills-row:nth-child(2) .skills-item:nth-child(2){
   animation-delay: 2.7s;
 }
-
-.skills-row:nth-child(2) .skills-item:nth-child(3) {
+.skills-row:nth-child(2) .skills-item:nth-child(3){
   animation-delay: 3.1s;
 }
-
-.skills-row:nth-child(2) .skills-item:nth-child(4) {
+.skills-row:nth-child(2) .skills-item:nth-child(4){
   animation-delay: 2.5s;
 }
-
-.skills-row:nth-child(3) .skills-item:nth-child(1) {
+.skills-row:nth-child(3) .skills-item:nth-child(1){
   animation-delay: 2.8s;
 }
-
-.skills-row:nth-child(3) .skills-item:nth-child(2) {
+.skills-row:nth-child(3) .skills-item:nth-child(2){
   animation-delay: 2.4s;
 }
-
-.skills-row:nth-child(3) .skills-item:nth-child(3) {
+.skills-row:nth-child(3) .skills-item:nth-child(3){
   animation-delay: 2.9s;
 }
 
@@ -160,50 +155,49 @@ h1 p:nth-child(2) {
     opacity: 1;
   }
 }
+
+
 /* ------------------------------ */
 /* --------- Scroll Bar --------- */
 /* ------------------------------ */
+
 html, body {
   scrollbar-color: transparent transparent;
 }
-
 html::-webkit-scrollbar,
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
   width: 0;
 }
 
+
 #scrollPath,
-#progressBar {
+#progressBar{
   position: fixed;
   top: 0;
   right: 0;
   width: 10px;
   z-index: 4;
 }
-
-#scrollPath {
+#scrollPath{
   height: 100%;
   background: rgba(255, 255, 255, 0.05);
 }
-
-#progressBar {
-  background: linear-gradient(to top, #008aff, #00ffe7);
+#progressBar{
+  background:linear-gradient(to top, #008aff, #00ffe7);
 }
 
 #progressBar:before,
-#progressBar:after {
-  content: "";
+#progressBar:after{
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
+  background:linear-gradient(to top, #008aff, #00ffe7);
   filter: blur(10px);
-}
 
-#progressBar:after {
+}
+#progressBar:after{
   filter: blur(30px);
 }
-
-/*# sourceMappingURL=animations.css.map */
