@@ -4,7 +4,7 @@
 * [Technologies](#technologies)
 
 ## Walk through video
-Insert vid here
+<img src="https://github.com/Elliott7/gifs_public/blob/master/PersonalAnimation2.gif" alt="GIF">
 
 ## General Info
 This is my portfolio website, it demonstrates a selection of recent projects
