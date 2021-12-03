@@ -179,16 +179,22 @@ a, a:focus, a:active {
   font-size: 0.8em;
   height: 120px;
   width: 160px;
-  border: double 3px transparent;
+  border: double 2px transparent;
   background-image: linear-gradient($color-background, $color-background),
   radial-gradient(circle at top left, $color-blue, $color-red);
   border-radius: 10px;
   background-origin: border-box;
   background-clip: content-box, border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .skills-logo{
-  height: 70px;
+  max-height: 70px;
+  max-width: 90%;
+  height: auto;
   padding: 10px 0 5px 0;
 }
 
